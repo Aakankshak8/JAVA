@@ -8,7 +8,7 @@ class MaxNumber{
 		int n2 = sc.nextInt();
 		int n3 = sc.nextInt();
 		if (n1==n2 && n2==n3){
-		System.out.println("All are equal");
+		System.out.println(" equal");
 }
 else {
 
