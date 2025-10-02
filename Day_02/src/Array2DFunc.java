@@ -1,5 +1,9 @@
 import java.util.Scanner;
 public class Array2DFunc {
+
+
+
+
 	public static int addAllNumbers(int [][]arr) {
 		int sum=0;
 		Scanner sc = new Scanner(System.in);
@@ -181,30 +185,35 @@ public class Array2DFunc {
 	}
 
 	public static int[] MaxRow(int[][] arr) {
-		// TODO Auto-generated method stub
-		
-		    int[] rowMax = new int[arr.length]; // row ची संख्या एवढ्या size चा array
-		    
-		    for (int i = 0; i < arr.length; i++) {
-		        int max = arr[i][0];  // row मधला पहिला element घे
-		        for (int j = 1; j < arr[i].length; j++) {
-		            if (arr[i][j] > max) {  // जास्त असेल तर update कर
-		                max = arr[i][j];
-		            }
-		        }
-		        rowMax[i] = max;  // त्या row चा max store कर
-		    }
-		    return rowMax;  // पूर्ण row max array return कर
+		int temp[] = new int[arr.length];
+		for(int i=0;i<arr.length;i++) {
+			int max=0;
+			for(int j=0;j<arr[i].length;j++) {
+				if(arr[i][j]>max) {
+					max=arr[i][j];
+				}
+			}
+			temp[i]=max;
 		}
-
 		
-		
-	
+		return temp;
+	}
 
-	public static int[] MaxCol(int[][] arr) {
-		// TODO Auto-generated method stub
-		return null;
+	public static int[] MaxCol(int[][] arr1) { 
+		int temp[] =new int[arr1.length];
+		
+		for(int j=0; j<arr1.length;j++) {
+			int max=0;
+			
+			for(int i=0;i<arr1.length;i++) {
+				if(arr1[i][j]>max) {
+					max=arr1[i][j];
+				}
+			}
+			temp[j]=max;
+		}
+		
+		return temp;
+		
 	}
 }
-
-

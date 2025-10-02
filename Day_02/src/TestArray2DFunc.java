@@ -42,7 +42,7 @@ public class TestArray2DFunc {
 		    break;
 
 		case 6:
-			int cmax[] = Array2DFunc.MaxCol(arr);
+			int cmax[] = Array2DFunc.MaxCol(arr1);
 			Array2DFunc.displayData(cmax);
 			break;
 		case 7:
